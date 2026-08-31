@@ -62,6 +62,7 @@
             android:id="@+id/editText"
             android:inputType="text"
             android:hint="WRITE IN ME"
+            android:textSize="50dp"
             app:autoSizeTextType="uniform" />
 
         <!-- End of scroll view -->

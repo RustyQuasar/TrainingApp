@@ -186,12 +186,4 @@ public class CalculatorActivity extends AppCompatActivity {
         operatorIndex = newIndex;
         return true;
     }
-
-    /**
-     * Populates the UI with data from the ScoutingForm.
-     *
-     * @param form The ScoutingForm object to populate the UI.
-     */
-
-
 }
