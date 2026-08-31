@@ -16,8 +16,6 @@ public class Sample extends AppCompatActivity {
     private TextView sampleText;
     private ToggleButton sampleToggle;
     private EditText sampleEdit;
-    private String sampleTextString;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
