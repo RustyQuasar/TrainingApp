@@ -44,8 +44,6 @@ public class CalculatorActivity extends AppCompatActivity {
         period = findViewById(R.id.period);
         equals = findViewById(R.id.equals);
         numberDisplay = findViewById(R.id.numberDisplay);
-        period = findViewById(R.id.period);
-        invert = findViewById(R.id.invert);
 
         numPad = new Button[]{one, two, three, four, five, six, seven, eight, nine, zero, period};
         operatorPad = new Button[]{divide, multiply, add, subtract, exponent};
@@ -123,10 +121,19 @@ public class CalculatorActivity extends AppCompatActivity {
         invert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (continuedEquation) {
+                    continuedEquation = false;
+                    firstNumber = "";
+                    operatorIndex = -1;
+                }
                 if (operatorIndex == -1) {
-                    firstNumber = String.valueOf(Double.parseDouble(firstNumber) * -1).replaceAll("\\.0$", "");
+                    if (firstNumber.isEmpty()) firstNumber = "-";
+                    else if (firstNumber.charAt(0) == '-') firstNumber = firstNumber.substring(1);
+                    else firstNumber = "-" + firstNumber;
                 } else {
-                    secondNumber = String.valueOf(Double.parseDouble(secondNumber) * -1).replaceAll("\\.0$", "");
+                    if (secondNumber.isEmpty()) secondNumber = "-";
+                    else if (secondNumber.charAt(0) == '-') secondNumber = secondNumber.substring(1);
+                    else secondNumber = "-" + secondNumber;
                 }
                 updateNumberDisplay();
             }
