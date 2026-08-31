@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!-- The above paragraph of code is at the top of every file, and initializes everything-->
+
+    <!-- This is an example of a linear layout, a tool you can use to group things together. You can have several of these in a document, creating easily aligned rows, columns, etc -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <!-- This is an example of a TextView, one of the main ways we communicate to the user.
+        We mostly use these for titles and labels -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="READ ME"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:id="@+id/textview"
+            app:autoSizeTextType="uniform" />
+
+        <!-- This is a button, the primary way we let the user interact with the app.
+        You'll often see these as counters and menu buttons -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            app:autoSizeTextType="uniform"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:id="@+id/button"
+            android:text="CLICK ME" />
+
+        <!-- This is a toggle button, a different way we let the user interact with the app.
+        We mostly use these for true/false statements usually, but they can also be toggles for things like timers -->
+        <ToggleButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/toggleButton"
+            app:autoSizeTextType="uniform" />
+
+        <!-- This is a scroll view, usually used to sorround elements that change sizes - like our edit text that stores anywhere betweeen paragraphs and two characters.
+        This acts similar to a linear layout in storing other elements within it, and just lets the users scroll through it-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/scrollView">
+
+        <!-- This is an edit text, the primary way we let the user enter text.
+        You'll usually see these as basic things like getting the name, team number, match number, comments, etc. -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/editText"
+            android:inputType="text"
+            android:hint="WRITE IN ME"
+            app:autoSizeTextType="uniform" />
+
+        <!-- End of scroll view -->
+        </ScrollView>
+
+        <!-- This simply marks the end of the layout. You'll see this for elements that have other elements inside of them
+        The simpler /> is the end of elements that only contain themselves-->
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
